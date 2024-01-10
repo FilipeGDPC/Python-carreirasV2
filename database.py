@@ -1,13 +1,15 @@
 from sqlalchemy import create_engine, text
 
-string_conexao = (
-    "mysql+pymysql://tq19uykrk9a9jfwjv58o:pscale_pw_JiIzsNw7TC6PDnThgniXzVLmYm3WLIzbRaqKJ4lJldR@aws.connect.psdb.cloud/carreiras-python?charset=utf8mb4"
-)
+string_conexao = "mysql+pymysql://xqftj4cfhldtamtybhj5:pscale_pw_z9YICD2BRR5t5gbbyvRHgPkp949uvSrT6Waiyu2nlPb@aws.connect.psdb.cloud/carreiras-python?charset=utf8mb4"
 engine = create_engine(string_conexao,
                        connect_args={"ssl": {
                            "ssl_ca": "/etc/ssl/cert.pem"
                        }})
 
-with engine.connect() as conn:
-  result = conn.execute(text("SELECT * FROM vagas"))
-  print(result.all())
+def carrega_vagas_db():
+      with engine.connect() as conn:
+        resultado = conn.execute(text("SELECT * FROM vagas"))
+        vagas = []
+        for vaga in resultado.all():
+          vagas.append(vaga._asdict())
+        return vagas
