@@ -7,6 +7,7 @@ Python: The primary language driving the backend logic of the system.
 Flask: A Python web framework used to create the web application.
 HTML: Used for structuring and marking up the user interface.
 CSS and Bootstrap: Responsible for the design and styling of the application, providing a visually pleasing experience.
+SQL: SQL (Structured Query Language) é uma linguagem de programação utilizada para gerenciar e manipular bancos de dados relacionais. 
 
 ## Key Features
 Application Form:
@@ -34,8 +35,8 @@ Instant Feedback:
 -Run the application with the command python app.py.
 -Access the application in your web browser.
 
-##Contact
+## Contact
 Feel free to reach out if you have any questions, suggestions, or feedback about the project. I am open to collaborations and continuous improvements.
 Thank you for exploring my project! I hope it proves useful and effective in the job recruitment and application process.
 
-Filipe Cordeiro
+### Filipe Cordeiro
